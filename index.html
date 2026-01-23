@@ -1,143 +1,181 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Forex Focus - Education Channel</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forex Focus Landing Page</title>
 
 <style>
-    body {
-        font-family: Arial, sans-serif;
-        background: #ffffff;
-        text-align: center;
-        padding: 40px 15px;
-        color: #222;
-    }
 
-    /* Logo Glow */
-    .logo {
-        width: 120px;
-        height: 120px;
-        margin: auto;
-        border-radius: 20px;
-        box-shadow: 0 0 25px rgba(0, 255, 150, 0.8),
-                    0 0 45px rgba(0, 150, 255, 0.6);
-        animation: glow 2s infinite alternate;
-    }
+.forex-wrap{
+max-width:430px;
+margin:auto;
+background:#ffffff;
+padding:30px 22px;
+border-radius:22px;
+text-align:center;
+box-shadow:0 15px 40px rgba(0,0,0,0.08);
+font-family:Arial,sans-serif;
+}
 
-    @keyframes glow {
-        from { box-shadow: 0 0 15px rgba(0,255,150,.6); }
-        to { box-shadow: 0 0 45px rgba(0,150,255,.9); }
-    }
+/* LOGO */
+.forex-logo{
+width:95px;
+height:95px;
+border-radius:20px;
+object-fit:contain;
+display:block;
+margin:0 auto;
+box-shadow:0 0 20px rgba(0,170,255,0.5);
+}
 
-    h1 {
-        margin-top: 25px;
-        font-size: 26px;
-    }
+/* HEADINGS */
+.forex-title{
+font-size:24px;
+font-weight:bold;
+margin-top:15px;
+color:#111;
+}
 
-    h1 span {
-        color: #007bff;
-    }
+.forex-title span{
+color:#007bff;
+}
 
-    .subtitle {
-        color: #1a8f3c;
-        font-size: 18px;
-        margin: 10px 0;
-    }
+.forex-subtitle{
+color:#00a859;
+font-size:15px;
+margin-top:6px;
+}
 
-    .subscribers {
-        font-size: 18px;
-        margin-top: 10px;
-        font-weight: bold;
-    }
+/* TRUST */
+.forex-trust{
+margin-top:10px;
+font-size:15px;
+font-weight:bold;
+color:#333;
+}
 
-    .desc {
-        margin-top: 20px;
-        font-size: 15px;
-    }
+/* DESCRIPTION */
+.forex-desc{
+font-size:14px;
+color:#666;
+margin-top:8px;
+}
 
-    .small {
-        color: #777;
-        font-size: 13px;
-        margin-top: 5px;
-    }
+/* MAIN BUTTON */
+.btn-main{
+display:block;
+margin-top:20px;
+padding:16px;
+border-radius:50px;
+font-size:16px;
+font-weight:bold;
+text-decoration:none;
+color:white;
+background:linear-gradient(45deg,#00c853,#0091ff);
+box-shadow:0 0 18px rgba(0,160,255,0.6);
+animation:pulse 1.5s infinite alternate;
+}
 
-    /* Buttons */
-    .btn {
-        display: block;
-        margin: 15px auto;
-        padding: 16px 35px;
-        font-size: 17px;
-        color: #fff;
-        text-decoration: none;
-        border-radius: 50px;
-        width: 90%;
-        max-width: 350px;
-        background: linear-gradient(45deg, #00c853, #2196f3);
-        box-shadow: 0 0 20px rgba(0, 200, 83, 0.7);
-        animation: pulse 1.5s infinite;
-        transition: transform .2s;
-    }
+@keyframes pulse{
+from{box-shadow:0 0 10px rgba(0,160,255,0.4);}
+to{box-shadow:0 0 25px rgba(0,160,255,0.9);}
+}
 
-    .btn.secondary {
-        background: linear-gradient(45deg, #1e88e5, #00c853);
-    }
+/* INFO TEXT */
+.timer-text{
+margin-top:18px;
+font-size:16px;
+font-weight:bold;
+color:#111;
+}
 
-    .btn.info {
-        background: linear-gradient(45deg, #00acc1, #42a5f5);
-    }
+/* DISCLAIMER */
+.forex-footer{
+font-size:12px;
+color:#777;
+margin-top:16px;
+line-height:18px;
+}
 
-    .btn:hover {
-        transform: scale(1.05);
-    }
+/* LINKS */
+.footer-links{
+margin-top:12px;
+font-size:13px;
+}
 
-    @keyframes pulse {
-        0% { box-shadow: 0 0 10px rgba(0,200,83,.6); }
-        50% { box-shadow: 0 0 30px rgba(33,150,243,.9); }
-        100% { box-shadow: 0 0 10px rgba(0,200,83,.6); }
-    }
+.footer-links a{
+color:#007bff;
+font-weight:bold;
+text-decoration:none;
+margin:0 6px;
+}
 
-    .timer {
-        margin-top: 25px;
-        font-size: 20px;
-        font-weight: bold;
-    }
+/* AGENCY */
+.forex-agency{
+margin-top:10px;
+font-size:13px;
+}
 
-    .join {
-        margin-top: 15px;
-        font-size: 14px;
-    }
+.forex-agency a{
+color:#007bff;
+font-weight:bold;
+text-decoration:none;
+}
 
-    footer {
-        margin-top: 35px;
-        font-size: 14px;
-    }
-
-    footer a {
-        color: #007bff;
-        text-decoration: none;
-        font-weight: bold;
-    }
-
-    .links {
-        margin-top: 20px;
-        font-size: 13px;
-    }
-
-    .links a {
-        color: #007bff;
-        text-decoration: none;
-        margin: 0 5px;
-    }
-
-    .disclaimer {
-        margin-top: 25px;
-        font-size: 12px;
-        color: #888;
-    }
 </style>
 </head>
+
+<body>
+
+<div class="forex-wrap">
+
+<img src="https://salmon-mandrill-935968.hostingersite.com/wp-content/uploads/2025/10/focus-forex-logo.jpg" class="forex-logo">
+
+<div class="forex-title">
+Learn Forex Trading With <span>Forex Focus</span>
+</div>
+
+<div class="forex-subtitle">
+Unlock Smart Trading • Build Strategy • Grow Discipline
+</div>
+
+<div class="forex-trust">
+25,000+ Active Forex Learners 🚀
+</div>
+
+<div class="forex-desc">
+Professional Forex & Crypto Market Education Community.<br>
+No Financial Advice • Market Risk Involved
+</div>
+
+<a href="https://t.me/+me4_9KkbjSg2Y2U1" class="btn-main">
+Join Free Telegram Learning Community
+</a>
+
+<div class="timer-text">
+Instant Telegram Access Available ✅
+</div>
+
+<div class="forex-footer">
+Educational Use Only • No Signals • No Profit Guarantee • Trade At Your Own Risk
+</div>
+
+<div class="footer-links">
+<a href="https://t.me/+me4_9KkbjSg2Y2U1" target="_blank">Privacy Policy</a> |
+<a href="https://t.me/+me4_9KkbjSg2Y2U1" target="_blank">Disclaimer</a> |
+<a href="https://t.me/+me4_9KkbjSg2Y2U1" target="_blank">Terms</a>
+</div>
+
+<div class="forex-agency">
+Maintained By 
+<a href="https://wa.link/y2913g" target="_blank">
+Metamind Digital Agency
+</a>
+</div>
+
+</div>
+
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -151,91 +189,12 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 fbq('init', '2447315595704474');
 fbq('track', 'PageView');
 </script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=2447315595704474&ev=PageView&noscript=1"
-/></noscript>
+
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2447315595704474&ev=PageView&noscript=1"/>
+</noscript>
 <!-- End Meta Pixel Code -->
-<body>
-
-<img src="https://salmon-mandrill-935968.hostingersite.com/wp-content/uploads/2025/10/focus-forex-logo.jpg" class="logo" alt="Forex Focus">
-
-<h1>Learn how to Trade with <span>Forex Focus</span> - Expert</h1>
-
-<div class="subtitle">
-    Unlock the Secrets to Crypto & Forex Success
-</div>
-
-<div class="subscribers">
-    5,555 Subscribers
-</div>
-
-<div class="desc">
-    The Best Crypto and Forex Signals For Educational Use Only.
-</div>
-<div class="small">
-    No financial advice • Market risk involved
-</div>
-
-<!-- Buttons -->
-<a href="https://t.me/+yviLthSH-4U5MDhl" class="btn">
-    View In Telegram
-</a>
-
-<a href="https://affs.click/TNCK1" class="btn secondary" target="_blank">
-    🚀 Open New Account in XM
-</a>
-
-<a href="https://t.me/frxfocus" class="btn info">
-    ℹ️ More Information
-</a>
-
-<div class="timer" id="timer">02 : 00</div>
-
-<div class="join">
-    If you have <b>Telegram</b>, you can join instantly
-</div>
-
-<footer>
-    Ads Maintained By 
-    <a href="https://t.me/+yviLthSH-4U5MDhl" target="_blank">
-        Metamind Digital Agency
-    </a>
-</footer>
-
-<div class="links">
-    <a href="https://t.me/+yviLthSH-4U5MDhl">Privacy Policy</a> •
-    <a href="https://t.me/+yviLthSH-4U5MDhl">Disclaimer</a> •
-    <a href="https://t.me/+yviLthSH-4U5MDhl">Terms</a>
-</div>
-
-<div class="disclaimer">
-    This site is not a part of the Facebook™ website or Facebook Inc.  
-    This site is NOT endorsed by Facebook™ in any way.
-</div>
-
-<script>
-    let time = 120;
-    const timerElement = document.getElementById("timer");
-
-    const countdown = setInterval(() => {
-        let minutes = Math.floor(time / 60);
-        let seconds = time % 60;
-
-        timerElement.innerHTML =
-            `${minutes.toString().padStart(2,'0')} : ${seconds.toString().padStart(2,'0')}`;
-
-        time--;
-
-        if (time < 0) {
-            clearInterval(countdown);
-            window.location.href = "https://t.me/+yviLthSH-4U5MDhl";
-        }
-    }, 1000);
-</script>
 
 </body>
 </html>
-
-
-
-
