@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forex Focus Landing Page</title>
+
+<style>
+
+.forex-wrap{
+max-width:430px;
+margin:auto;
+background:#ffffff;
+padding:30px 22px;
+border-radius:22px;
+text-align:center;
+box-shadow:0 15px 40px rgba(0,0,0,0.08);
+font-family:Arial,sans-serif;
+}
+
+/* LOGO */
+.forex-logo{
+width:95px;
+height:95px;
+border-radius:20px;
+object-fit:contain;
+display:block;
+margin:0 auto;
+box-shadow:0 0 20px rgba(0,170,255,0.5);
+}
+
+/* HEADINGS */
+.forex-title{
+font-size:24px;
+font-weight:bold;
+margin-top:15px;
+color:#111;
+}
+
+.forex-title span{
+color:#007bff;
+}
+
+.forex-subtitle{
+color:#00a859;
+font-size:15px;
+margin-top:6px;
+}
+
+/* TRUST */
+.forex-trust{
+margin-top:10px;
+font-size:15px;
+font-weight:bold;
+color:#333;
+}
+
+/* DESCRIPTION */
+.forex-desc{
+font-size:14px;
+color:#666;
+margin-top:8px;
+}
+
+/* MAIN BUTTON */
+.btn-main{
+display:block;
+margin-top:20px;
+padding:16px;
+border-radius:50px;
+font-size:16px;
+font-weight:bold;
+text-decoration:none;
+color:white;
+background:linear-gradient(45deg,#00c853,#0091ff);
+box-shadow:0 0 18px rgba(0,160,255,0.6);
+animation:pulse 1.5s infinite alternate;
+}
+
+@keyframes pulse{
+from{box-shadow:0 0 10px rgba(0,160,255,0.4);}
+to{box-shadow:0 0 25px rgba(0,160,255,0.9);}
+}
+
+/* INFO TEXT */
+.timer-text{
+margin-top:18px;
+font-size:16px;
+font-weight:bold;
+color:#111;
+}
+
+/* DISCLAIMER */
+.forex-footer{
+font-size:12px;
+color:#777;
+margin-top:16px;
+line-height:18px;
+}
+
+/* LINKS */
+.footer-links{
+margin-top:12px;
+font-size:13px;
+}
+
+.footer-links a{
+color:#007bff;
+font-weight:bold;
+text-decoration:none;
+margin:0 6px;
+}
+
+/* AGENCY */
+.forex-agency{
+margin-top:10px;
+font-size:13px;
+}
+
+.forex-agency a{
+color:#007bff;
+font-weight:bold;
+text-decoration:none;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="forex-wrap">
+
+<img src="https://salmon-mandrill-935968.hostingersite.com/wp-content/uploads/2025/10/focus-forex-logo.jpg" class="forex-logo">
+
+<div class="forex-title">
+Learn Forex Trading With <span>Forex Focus</span>
+</div>
+
+<div class="forex-subtitle">
+Unlock Smart Trading • Build Strategy • Grow Discipline
+</div>
+
+<div class="forex-trust">
+25,000+ Active Forex Learners 🚀
+</div>
+
+<div class="forex-desc">
+Professional Forex & Crypto Market Education Community.<br>
+No Financial Advice • Market Risk Involved
+</div>
+
+<a href="https://t.me/+me4_9KkbjSg2Y2U1" class="btn-main">
+Join Free Telegram Learning Community
+</a>
+
+<div class="timer-text">
+Instant Telegram Access Available ✅
+</div>
+
+<div class="forex-footer">
+Educational Use Only • No Signals • No Profit Guarantee • Trade At Your Own Risk
+</div>
+
+<div class="footer-links">
+<a href="https://t.me/+me4_9KkbjSg2Y2U1" target="_blank">Privacy Policy</a> |
+<a href="https://t.me/+me4_9KkbjSg2Y2U1" target="_blank">Disclaimer</a> |
+<a href="https://t.me/+me4_9KkbjSg2Y2U1" target="_blank">Terms</a>
+</div>
+
+<div class="forex-agency">
+Maintained By 
+<a href="https://wa.link/y2913g" target="_blank">
+Metamind Digital Agency
+</a>
+</div>
+
+</div>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2447315595704474');
+fbq('track', 'PageView');
+</script>
+
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2447315595704474&ev=PageView&noscript=1"/>
+</noscript>
+<!-- End Meta Pixel Code -->
+
+</body>
+</html>
