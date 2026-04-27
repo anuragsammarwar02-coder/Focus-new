@@ -1,11 +1,192 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Forex Focus Community</title>
-<meta name="description" content="Join Forex Focus Community for educational forex market insights, price action learning and risk management training.">
+<title>Learn Forex The Right Way</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#0a0615;
+    color:#fff;
+    text-align:center;
+    overflow-x:hidden;
+}
+
+/* Glow Background */
+body::before, body::after{
+    content:"";
+    position:fixed;
+    width:500px;
+    height:500px;
+    border-radius:50%;
+    filter:blur(120px);
+    z-index:-1;
+}
+body::before{
+    background:#ff00c8;
+    top:-150px;
+    left:-150px;
+    opacity:0.25;
+}
+body::after{
+    background:#6a00ff;
+    bottom:-150px;
+    right:-150px;
+    opacity:0.25;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:70px 20px;
+}
+
+/* Logo */
+.logo{
+    width:100px;
+    border-radius:50%;
+    display:block;
+    margin:0 auto;
+}
+
+/* Badge */
+.badge{
+    margin-top:20px;
+    display:inline-block;
+    padding:8px 18px;
+    border-radius:30px;
+    font-size:13px;
+    font-weight:600;
+    background:linear-gradient(90deg,#ff00c8,#6a00ff);
+}
+
+/* Offer */
+.offer{
+    margin-top:25px;
+    font-weight:700;
+    font-size:18px;
+    background:linear-gradient(90deg,#ff00c8,#6a00ff);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+/* Channel Name */
+h1{
+    margin-top:25px;
+    font-size:42px;
+    font-weight:800;
+    line-height:1.3;
+}
+
+/* Countdown */
+.countdown{
+    margin-top:30px;
+    font-size:20px;
+    font-weight:700;
+}
+
+/* Button */
+.cta{
+    margin-top:20px;
+}
+.cta a{
+    display:inline-block;
+    padding:18px 55px;
+    border-radius:60px;
+    font-size:18px;
+    font-weight:700;
+    text-decoration:none;
+    background:linear-gradient(90deg,#ff00c8,#6a00ff);
+    color:#fff;
+    box-shadow:0 0 25px rgba(255,0,200,0.4);
+    transition:0.3s;
+}
+.cta a:hover{transform:scale(1.07);}
+
+/* Members */
+.members{
+    margin-top:20px;
+    font-size:15px;
+    opacity:0.85;
+}
+
+/* Features */
+.features{
+    margin-top:90px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+}
+.card{
+    padding:40px;
+    border-radius:25px;
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(20px);
+    border:1px solid rgba(255,255,255,0.08);
+    transition:0.3s;
+}
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 30px rgba(255,0,200,0.3);
+}
+.icon{
+    margin-bottom:20px;
+}
+.card h3{
+    margin-bottom:15px;
+    font-size:20px;
+}
+
+/* Final CTA */
+.final-cta{
+    margin-top:120px;
+    padding:60px 30px;
+    border-radius:30px;
+    background:linear-gradient(135deg,#ff00c8,#6a00ff);
+}
+.final-cta h2{
+    font-size:30px;
+    margin-bottom:20px;
+}
+.final-cta a{
+    display:inline-block;
+    padding:15px 45px;
+    border-radius:50px;
+    background:#fff;
+    color:#6a00ff;
+    font-weight:700;
+    text-decoration:none;
+}
+
+/* Footer */
+.footer{
+    margin-top:80px;
+    font-size:14px;
+    opacity:0.7;
+}
+.footer a{
+    color:#ff00c8;
+    text-decoration:none;
+}
+.disclaimer{
+    margin-top:20px;
+    font-size:13px;
+    opacity:0.6;
+    line-height:1.6;
+}
+
+@media(max-width:768px){
+    h1{font-size:28px;}
+}
+</style>
+</head>
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -16,188 +197,108 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '937482622086697');
+fbq('init', '2067634920633682');
 fbq('track', 'PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=937482622086697&ev=PageView&noscript=1"
+src="https://www.facebook.com/tr?id=2067634920633682&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
-
-<style>
-body{
-    font-family: Arial, sans-serif;
-    background:#f4f6f8;
-    margin:0;
-    padding:40px 15px;
-}
-
-.wrapper{
-    max-width:600px;
-    margin:auto;
-    background:#ffffff;
-    padding:30px;
-    border-radius:12px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.1);
-    text-align:center;
-}
-
-.logo{
-    width:120px;
-    border-radius:12px;
-    margin-bottom:15px;
-}
-
-h1{
-    font-size:26px;
-    margin:10px 0;
-    font-weight:800;
-}
-
-.highlight{
-    color:#1e88e5;
-}
-
-.subheading{
-    color:#0f9d58;
-    font-weight:bold;
-    margin-bottom:10px;
-}
-
-.note{
-    font-size:13px;
-    color:#777;
-    margin-bottom:20px;
-}
-
-.features{
-    text-align:left;
-    margin:20px 0;
-    font-size:15px;
-}
-
-.features p{
-    margin:10px 0;
-}
-
-.btn{
-    display:inline-block;
-    background:linear-gradient(45deg,#1b5e20,#2e7d32);
-    color:#fff;
-    padding:16px 45px;
-    border-radius:50px;
-    text-decoration:none;
-    font-size:18px;
-    font-weight:700;
-    margin-top:20px;
-    box-shadow:0 8px 20px rgba(0,0,0,0.25);
-    transition:0.3s;
-}
-
-.btn:hover{
-    transform:scale(1.08);
-    box-shadow:0 12px 30px rgba(0,0,0,0.35);
-}
-
-.timer{
-    margin-top:20px;
-}
-
-.timer span{
-    background:#e3e8ef;
-    padding:10px 20px;
-    border-radius:25px;
-    margin:5px;
-    font-weight:bold;
-    display:inline-block;
-}
-
-.footer{
-    font-size:13px;
-    color:#555;
-    margin-top:25px;
-    line-height:1.6;
-}
-
-.footer a{
-    color:#1e88e5;
-    text-decoration:none;
-    font-weight:bold;
-}
-
-.disclaimer{
-    font-size:11px;
-    color:#999;
-    margin-top:15px;
-    line-height:1.6;
-}
-
-@media(max-width:600px){
-    body{padding:20px 10px;}
-    h1{font-size:22px;}
-}
-</style>
-
-</head>
 <body>
 
-<div class="wrapper">
+<div class="container">
 
-<img src="https://salmon-mandrill-935968.hostingersite.com/wp-content/uploads/2025/10/focus-forex-logo.jpg" class="logo" alt="Forex Focus Logo">
+<img src="https://salmon-mandrill-935968.hostingersite.com/wp-content/uploads/2025/10/focus-forex-logo.jpg" class="logo">
+
+<div class="badge">👑 Professional Forex Mentor</div>
+
+<div class="offer">
+🔥 LIMITED OFFER — Lifetime FREE Premium Forex Access — Only First 100 Users
+</div>
 
 <h1>
-Learn Forex with 
-<span class="highlight">FOREX FOCUS COMMUNITY</span>
+Learn Forex The Right Way <br>
+With Structured Education in my channel
 </h1>
 
-<p class="subheading">
-Unlock the Power of Smart Trading
-</p>
+<div class="countdown">
+⏳ Offer Ends In: <span id="timer">59:59</span>
+</div>
 
-<p class="note">
-No financial advice • Market risk involved
-</p>
+<div class="cta">
+<a href="https://t.me/+RHarP4-z8M82ZGE1">Join Free Telegram Community</a>
+</div>
+
+<div class="members">
+12,000+ Community Members 🚀
+</div>
 
 <div class="features">
-<p>🚀 Daily Forex Market Analysis</p>
-<p>📊 Accurate Trade Setups & Insights</p>
-<p>📚 Beginner to Advanced Education</p>
-<p>🛡 Risk Management & Capital Protection</p>
-<p>🎯 100% Free Telegram Channel</p>
+
+<div class="card">
+<div class="icon">
+<svg width="40" fill="#ff00c8" viewBox="0 0 24 24">
+<path d="M3 13h2v-2H3v2zm4 0h14v-2H7v2z"/>
+</svg>
+</div>
+<h3>Live Market Breakdown</h3>
+<p>Understand structure, liquidity and price action logic.</p>
 </div>
 
-<a href="https://t.me/+s1QGRHZcsH03Y2U1" target="_blank" class="btn">
-🚀 Join Free Telegram Now
-</a>
-
-<div class="timer">
-<span>08 Min</span>
-<span>24 Sec</span>
+<div class="card">
+<div class="icon">
+<svg width="40" fill="#ff00c8" viewBox="0 0 24 24">
+<path d="M12 2l4 20-4-4-4 4z"/>
+</svg>
+</div>
+<h3>Gold Strategy Learning</h3>
+<p>Concept-based education focused on XAUUSD.</p>
 </div>
 
-<p style="margin-top:15px;">
-If you have <strong>Telegram</strong>, you can join instantly
-</p>
+<div class="card">
+<div class="icon">
+<svg width="40" fill="#ff00c8" viewBox="0 0 24 24">
+<path d="M12 1l3 5 6 .9-4.5 4.4 1 6-5.5-3-5.5 3 1-6L3 6.9 9 6z"/>
+</svg>
+</div>
+<h3>Risk Management System</h3>
+<p>Position sizing, discipline and capital protection.</p>
+</div>
+
+</div>
+
+<div class="final-cta">
+<h2>Start Learning Today — Free Access</h2>
+<a href="https://t.me/+RHarP4-z8M82ZGE1">Join Now</a>
+</div>
 
 <div class="footer">
 Ads managed by Metamind Agency • 
-<a href="https://wa.link/y2913g" target="_blank">Contact for Ads</a>
+<a href="https://wa.link/y2913g">Contact for Ads</a>
 <br><br>
 
-By accessing this website, you agree to our 
-<a href="https://forexmind.online/terms-conditions/" target="_blank">Terms & Conditions</a>, 
-<a href="https://forexmind.online/privacy-policy/" target="_blank">Privacy Policy</a> and 
-<a href="https://forexmind.online/disclaimer/" target="_blank">Disclaimer</a>.
-</div>
+<a href="https://forexmind.online/terms-conditions/">Terms</a> |
+<a href="https://forexmind.online/disclaimer/">Disclaimer</a> |
+<a href="https://forexmind.online/privacy-policy/">Privacy</a>
 
 <div class="disclaimer">
-This website is for educational purposes only and does not provide financial advice. 
-Trading involves risk and capital may be at risk. 
-This site is not a part of Facebook™ or Meta Platforms Inc. 
-This site is NOT endorsed by Facebook™ in any way.
+Educational purposes only. We do not provide financial advice or guarantee profits. Trading involves risk.
+</div>
 </div>
 
 </div>
+
+<script>
+let time = 3600;
+const timer = document.getElementById("timer");
+
+setInterval(()=>{
+    let minutes = Math.floor(time/60);
+    let seconds = time%60;
+    timer.innerHTML = String(minutes).padStart(2,'0') + ":" + String(seconds).padStart(2,'0');
+    if(time>0) time--;
+},1000);
+</script>
 
 </body>
 </html>
