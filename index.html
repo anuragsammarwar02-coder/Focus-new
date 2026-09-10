@@ -1,502 +1,590 @@
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#0a0b0d" />
-  <meta name="description" content="Forex Focus — free educational content on forex markets, currency pairs, price action and trading concepts. For learning purposes only." />
-  <title>Forex Focus | Forex Market Education</title>
 
-  <!-- Meta Pixel Code -->
-  <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1130260856232291');
-    fbq('track', 'PageView');
-  </script>
-  <noscript>
-    <img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=1130260856232291&ev=PageView&noscript=1" alt="" />
-  </noscript>
-  <!-- End Meta Pixel Code -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    :root {
-      --bg: #0a0b0d;
-      --surface: #12141a;
-      --surface2: #1a1d26;
-      --border: #2a2e3a;
-      --text: #f0f1f4;
-      --muted: #8b90a0;
-      --gold: #f0c14b;
-      --gold-dim: rgba(240, 193, 75, 0.12);
-      --blue: #2d8cff;
-      --blue-dark: #1a6fd4;
-      --green: #3ecf8e;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      min-height: 100vh;
-      background: var(--bg);
-      color: var(--text);
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-      line-height: 1.5;
-      -webkit-font-smoothing: antialiased;
-    }
+<meta name="description"
+content="Join Forex Focus for free daily Forex analysis and signals.">
 
-    .wrap {
-      max-width: 640px;
-      margin: 0 auto;
-      padding: 40px 18px 48px;
-    }
+<style>
 
-    .header {
-      text-align: center;
-      margin-bottom: 32px;
-    }
-    .logo {
-      width: 88px;
-      height: 88px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin: 0 auto 14px;
-      display: block;
-      border: 2px solid rgba(240, 193, 75, 0.35);
-      box-shadow: 0 0 40px rgba(240, 193, 75, 0.15);
-    }
-    .brand {
-      font-size: 22px;
-      font-weight: 800;
-      letter-spacing: 0.6px;
-      color: var(--gold);
-      text-transform: uppercase;
-    }
-    .brand em {
-      font-style: normal;
-      color: #fff;
-      margin-left: 4px;
-    }
-    .tagline {
-      margin-top: 6px;
-      font-size: 13px;
-      color: var(--muted);
-    }
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      margin-top: 14px;
-      padding: 6px 14px;
-      border-radius: 999px;
-      border: 1px solid rgba(62, 207, 142, 0.35);
-      background: rgba(62, 207, 142, 0.08);
-      color: var(--green);
-      font-size: 12px;
-      font-weight: 600;
-    }
-    .badge-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: var(--green);
-      box-shadow: 0 0 8px rgba(62, 207, 142, 0.7);
-    }
+/* =========================
+   RESET
+========================= */
 
-    .hero {
-      text-align: center;
-      margin-bottom: 28px;
-    }
-    .hero h1 {
-      font-size: 26px;
-      font-weight: 800;
-      line-height: 1.25;
-      letter-spacing: -0.3px;
-      margin-bottom: 12px;
-    }
-    .hero h1 span { color: var(--gold); }
-    .hero p {
-      font-size: 14px;
-      color: var(--muted);
-      max-width: 480px;
-      margin: 0 auto;
-      line-height: 1.65;
-    }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    .cta-box {
-      margin: 28px 0 32px;
-      text-align: center;
-    }
-    .cta-primary {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      width: 100%;
-      min-height: 54px;
-      padding: 14px 24px;
-      border: none;
-      border-radius: 14px;
-      background: linear-gradient(135deg, var(--blue) 0%, var(--blue-dark) 100%);
-      color: #fff !important;
-      font-size: 16px;
-      font-weight: 700;
-      text-decoration: none !important;
-      cursor: pointer;
-      box-shadow: 0 10px 28px rgba(45, 140, 255, 0.28);
-      transition: transform 0.15s ease, filter 0.15s ease;
-    }
-    .cta-primary:hover {
-      transform: translateY(-2px);
-      filter: brightness(1.06);
-    }
-    .cta-primary:active { transform: translateY(0); }
-    .cta-icon {
-      width: 22px;
-      height: 22px;
-      border-radius: 50%;
-      background: #fff;
-      color: var(--blue-dark);
-      font-size: 12px;
-      font-weight: 900;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-    .cta-hint {
-      margin-top: 10px;
-      font-size: 12px;
-      color: var(--muted);
-    }
 
-    .section-title {
-      font-size: 13px;
-      font-weight: 700;
-      color: var(--muted);
-      text-transform: uppercase;
-      letter-spacing: 0.8px;
-      margin-bottom: 12px;
-      text-align: center;
-    }
-    .features {
-      display: grid;
-      gap: 10px;
-      margin-bottom: 28px;
-    }
-    .feature {
-      display: flex;
-      gap: 14px;
-      align-items: flex-start;
-      padding: 16px 16px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-    }
-    .feature-icon {
-      width: 36px;
-      height: 36px;
-      border-radius: 10px;
-      background: var(--gold-dim);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 18px;
-      flex-shrink: 0;
-    }
-    .feature h3 {
-      font-size: 14px;
-      font-weight: 700;
-      margin-bottom: 3px;
-    }
-    .feature p {
-      font-size: 12px;
-      color: var(--muted);
-      line-height: 1.45;
-    }
+/* =========================
+   BODY
+========================= */
 
-    .about {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 18px 16px;
-      margin-bottom: 20px;
-    }
-    .about h2 {
-      font-size: 15px;
-      font-weight: 700;
-      margin-bottom: 8px;
-      color: var(--gold);
-    }
-    .about p {
-      font-size: 13px;
-      color: var(--muted);
-      line-height: 1.6;
-      margin-bottom: 8px;
-    }
-    .about p:last-child { margin-bottom: 0; }
+body {
+    font-family: Arial, Segoe UI, sans-serif;
+    background: #f7f9fc;
+    color: #151525;
+}
 
-    .disclaimer {
-      background: #101218;
-      border: 1px solid #252830;
-      border-radius: 10px;
-      padding: 14px 14px;
-      margin-bottom: 24px;
-    }
-    .disclaimer strong {
-      display: block;
-      font-size: 12px;
-      color: #c8ccd6;
-      margin-bottom: 6px;
-    }
-    .disclaimer p {
-      font-size: 11px;
-      color: #6e7484;
-      line-height: 1.55;
-    }
 
-    .cta-secondary {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      width: 100%;
-      min-height: 48px;
-      padding: 12px 20px;
-      border-radius: 12px;
-      border: 1px solid var(--blue);
-      background: transparent;
-      color: var(--blue) !important;
-      font-size: 14px;
-      font-weight: 700;
-      text-decoration: none !important;
-      cursor: pointer;
-      transition: background 0.15s ease;
-    }
-    .cta-secondary:hover {
-      background: rgba(45, 140, 255, 0.08);
-    }
+/* =========================
+   CONTAINER
+========================= */
 
-    footer {
-      margin-top: 36px;
-      text-align: center;
-      font-size: 11px;
-      color: #555a68;
-      line-height: 1.6;
-    }
-    footer a {
-      color: var(--gold);
-      text-decoration: none;
-      font-weight: 600;
-    }
-    .footer-links {
-      margin-top: 8px;
-      display: flex;
-      justify-content: center;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-    .footer-links a {
-      color: #6e7484;
-      font-weight: 500;
-      font-size: 11px;
-    }
-    .footer-links a:hover { color: var(--gold); }
+.container {
+    width: 100%;
+    max-width: 460px;
+    margin: auto;
+    padding: 35px 16px;
+    text-align: center;
+}
 
-    .agency {
-      margin-top: 16px;
-      padding: 10px 12px;
-      border: 1px solid rgba(240, 193, 75, 0.35);
-      border-radius: 8px;
-      background: linear-gradient(180deg, rgba(29, 27, 16, 0.9), rgba(12, 13, 15, 0.94));
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-    .agency-left {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      text-decoration: none;
-      color: inherit;
-    }
-    .agency-bolt { color: #ffd85a; font-size: 18px; }
-    .agency-by { color: #aeb0b5; font-size: 10px; font-weight: 700; letter-spacing: 0.6px; }
-    .agency-name { color: #f5c946; font-size: 13px; font-weight: 900; letter-spacing: 0.5px; }
-    .agency-wa {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      padding: 7px 12px;
-      border-radius: 6px;
-      background: linear-gradient(180deg, #ffe27a, #f5c94c);
-      color: #17170f !important;
-      font-size: 10px;
-      font-weight: 900;
-      text-decoration: none !important;
-      border: 1px solid rgba(255, 235, 145, 0.65);
-    }
 
-    @media (min-width: 600px) {
-      .wrap { padding-top: 52px; }
-      .hero h1 { font-size: 28px; }
-      .brand { font-size: 24px; }
-    }
-  </style>
+/* =========================
+   ONLINE BAR
+========================= */
+
+.online {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #e8f5e9;
+    color: #218739;
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    background: #22c55e;
+    border-radius: 50%;
+}
+
+
+/* =========================
+   PROFILE
+========================= */
+
+.profile {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 25px auto 10px;
+    overflow: hidden;
+    border: 4px solid white;
+    box-shadow: 0 5px 20px #ddd;
+}
+
+.profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* =========================
+   HEADING
+========================= */
+
+h1 {
+    font-size: 23px;
+    margin: 12px 0 5px;
+    font-weight: 800;
+}
+
+.tag {
+    color: #0066ff;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+
+/* =========================
+   RATING
+========================= */
+
+.rating {
+    margin: 15px;
+    color: #ff9800;
+    font-size: 18px;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn {
+    display: block;
+    background: linear-gradient(135deg, #0066ff, #004dcc);
+    color: white;
+    padding: 16px;
+    border-radius: 14px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 20px 0;
+    box-shadow: 0 5px 15px #b8d0ff;
+}
+
+
+/* =========================
+   STATS
+========================= */
+
+.stats {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.card {
+    flex: 1;
+    background: white;
+    padding: 15px 5px;
+    border-radius: 14px;
+    box-shadow: 0 3px 10px #eee;
+}
+
+.number {
+    color: #0066ff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.heading {
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+.heading span {
+    color: #0066ff;
+}
+
+.sub {
+    color: #777;
+    margin: 10px;
+    font-size: 13px;
+}
+
+.alert {
+    background: #fff3e0;
+    color: #e65100;
+    padding: 12px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+
+/* =========================
+   FEATURES
+========================= */
+
+.feature {
+    background: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 12px;
+    text-align: left;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    box-shadow: 0 2px 8px #eee;
+}
+
+.icon {
+    font-size: 22px;
+}
+
+
+/* =========================
+   FOOTER / ADS
+========================= */
+
+.ads {
+    margin-top: 35px;
+    padding: 18px;
+    border-top: 1px solid #ddd;
+    font-size: 13px;
+    color: #777;
+}
+
+.ads a {
+    color: #0066ff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.disclaimer {
+    margin-top: 20px;
+    font-size: 10px;
+    color: #999;
+    line-height: 1.5;
+}
+
+
+/* =========================
+   TIMER
+========================= */
+
+.timer-box {
+    background: #e3f2fd;
+    color: #1565c0;
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 15px 0;
+    display: inline-block;
+}
+
+</style>
+
 </head>
+
+
 <body>
-  <div class="wrap">
 
-    <header class="header">
-      <img
-        class="logo"
-        src="https://growwvix.pro/wp-content/uploads/2026/08/focus-logo.jpg"
-        alt="Forex Focus logo"
-        width="88"
-        height="88"
-      />
-      <div class="brand">Forex Focus <em>◆</em></div>
-      <p class="tagline">Forex Market Education &amp; Insights</p>
-      <div class="badge">
-        <span class="badge-dot"></span>
-        Educational Channel · Active
-      </div>
-    </header>
+<div class="container">
 
-    <section class="hero">
-      <h1>Learn <span>Forex Market Concepts</span><br />the Clear Way</h1>
-      <p>
-        Free educational content on currency pairs, price action, market structure
-        and trading ideas — built for learners who want clear, practical lessons.
-      </p>
-    </section>
 
-    <!-- PRIMARY CTA — unique id for Meta Event Setup Tool -->
-    <div class="cta-box">
-      <a
-        id="btn-join-telegram"
-        class="cta-primary"
-        href="https://t.me/+sncMUjBZ9a41ZDll"
-        target="_blank"
-        rel="noopener noreferrer"
-        onclick="if(typeof fbq==='function'){fbq('track','Lead');}"
-      >
-        <span class="cta-icon">➤</span>
-        Join Free Telegram Channel
-      </a>
-      <p class="cta-hint">Free · Educational content only · No paid signals</p>
+    <!-- =========================
+         ONLINE BAR
+    ========================== -->
+
+    <div class="online">
+        <span class="dot"></span>
+        5,947 Traders Online Now
     </div>
 
-    <p class="section-title">What you will learn</p>
-    <div class="features">
-      <article class="feature">
-        <div class="feature-icon">📊</div>
-        <div>
-          <h3>Market Structure &amp; Trends</h3>
-          <p>How major pairs move, support/resistance ideas, and reading simple charts for learning.</p>
-        </div>
-      </article>
-      <article class="feature">
-        <div class="feature-icon">💱</div>
-        <div>
-          <h3>Currency Pairs &amp; Price Action</h3>
-          <p>How traders study momentum, structure and market behaviour — explained simply.</p>
-        </div>
-      </article>
-      <article class="feature">
-        <div class="feature-icon">📈</div>
-        <div>
-          <h3>Technical Analysis Basics</h3>
-          <p>Common patterns, levels and concepts in plain language for beginners.</p>
-        </div>
-      </article>
-      <article class="feature">
-        <div class="feature-icon">🎓</div>
-        <div>
-          <h3>Educational Market Setups</h3>
-          <p>Example scenarios with clear context — for learning, not as trade recommendations.</p>
-        </div>
-      </article>
+
+    <!-- =========================
+         PROFILE
+    ========================== -->
+
+    <div class="profile">
+
+        <img
+            src="https://growwvix.pro/wp-content/uploads/2026/08/focus-logo.jpg"
+            alt="Forex Focus"
+        >
+
     </div>
 
-    <div class="about">
-      <h2>About this page</h2>
-      <p>
-        Forex Focus is an educational Telegram community focused on forex-market
-        learning. We share concepts, chart examples and market commentary strictly
-        for educational and informational purposes.
-      </p>
-      <p>
-        Nothing on this page or in our channel is personalised financial advice,
-        a recommendation to buy or sell, or a promise of returns.
-      </p>
+
+    <!-- =========================
+         NAME
+    ========================== -->
+
+    <h1>FOREX FOCUS</h1>
+
+    <div class="tag">
+        🏆 India's No.1 Forex Trading Channel
     </div>
 
-    <div class="disclaimer">
-      <strong>Important disclaimer</strong>
-      <p>
-        Forex and CFD trading involve a high level of risk and may not be suitable
-        for everyone. You can lose more than your initial investment. This website
-        and our Telegram content are for general educational purposes only and do
-        not constitute investment or trading advice. Always do your own research
-        and consider your financial situation before making any trading decision.
-        We do not guarantee profits or specific outcomes.
-      </p>
+
+    <!-- =========================
+         RATING
+    ========================== -->
+
+    <div class="rating">
+
+        ★★★★★
+
+        <br>
+
+        <small style="color:#777;">
+            4.9/5 (2340 Reviews)
+        </small>
+
     </div>
 
-    <!-- Secondary CTA — different id -->
+
+    <!-- =========================
+         COUNTDOWN
+    ========================== -->
+
+    <div class="timer-box">
+
+        Redirecting in
+        <span id="countdown">10</span>
+        seconds...
+
+    </div>
+
+
+    <!-- =========================
+         JOIN BUTTON
+    ========================== -->
+
     <a
-      id="btn-join-telegram-alt"
-      class="cta-secondary"
-      href="https://t.me/+sncMUjBZ9a41ZDll"
-      target="_blank"
-      rel="noopener noreferrer"
-      onclick="if(typeof fbq==='function'){fbq('track','Lead');}"
+        class="btn"
+        href="https://t.me/+0sTSpgABJRFiZWM1"
+        id="joinBtn"
     >
-      Open Telegram Channel
+        Join Free Telegram Channel →
     </a>
 
-    <footer>
-      <p>© 2026 Forex Focus · Educational content only</p>
-      <div class="footer-links">
-        <a href="https://t.me/+sncMUjBZ9a41ZDll" target="_blank" rel="noopener noreferrer">Telegram</a>
-        <a href="#disclaimer" onclick="document.querySelector('.disclaimer').scrollIntoView({behavior:'smooth'});return false;">Disclaimer</a>
-      </div>
 
-      <div class="agency">
-        <a class="agency-left" href="https://wa.link/dli3xt" target="_blank" rel="noopener noreferrer">
-          <span class="agency-bolt">⚡</span>
-          <span class="agency-by">ADS BY</span>
-          <span class="agency-name">METAMIND AGENCY</span>
-        </a>
-        <a class="agency-wa" href="https://wa.link/dli3xt" target="_blank" rel="noopener noreferrer">
-          ◉ Connect on WhatsApp
-        </a>
-      </div>
-    </footer>
-  </div>
+    <!-- =========================
+         STATS
+    ========================== -->
 
-  <script>
-    (function () {
-      function fireLead() {
-        if (typeof fbq === 'function') {
-          fbq('track', 'Lead');
+    <div class="stats">
+
+        <div class="card">
+
+            <div class="number">
+                50K+
+            </div>
+
+            Members
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="number">
+                5+
+            </div>
+
+            Years
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="number">
+                95%
+            </div>
+
+            Accuracy
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+
+    <div class="heading">
+
+        Get <span>FREE Daily Calls</span>
+
+        <br>
+
+        for EURUSD, GBPUSD &amp; XAUUSD
+
+    </div>
+
+
+    <div class="sub">
+
+        Join thousands of traders getting daily Forex market analysis
+
+    </div>
+
+
+    <!-- =========================
+         ALERT
+    ========================== -->
+
+    <div class="alert">
+
+        🔥 Limited FREE Access Available
+
+    </div>
+
+
+    <!-- =========================
+         FEATURES
+    ========================== -->
+
+    <div class="feature">
+
+        <div class="icon">
+            📊
+        </div>
+
+        Daily Forex Pair Levels &amp; Signals
+
+    </div>
+
+
+    <div class="feature">
+
+        <div class="icon">
+            🎓
+        </div>
+
+        Educational Forex Market Analysis
+
+    </div>
+
+
+    <div class="feature">
+
+        <div class="icon">
+            👥
+        </div>
+
+        50,000+ Subscribers Community
+
+    </div>
+
+
+    <!-- =========================
+         SECOND JOIN BUTTON
+    ========================== -->
+
+    <a
+        class="btn"
+        href="https://t.me/+0sTSpgABJRFiZWM1"
+    >
+        Join Free Telegram Channel →
+    </a>
+
+
+    <!-- =========================
+         DISCLAIMER
+    ========================== -->
+
+    <div class="disclaimer">
+
+        <strong>Disclaimer:</strong>
+
+        <br>
+
+        This channel is for educational purposes only.
+        Trading involves market risk. Please consult your financial advisor before making investment decisions.
+
+    </div>
+
+
+    <!-- =========================
+         ADS
+    ========================== -->
+
+    <div class="ads">
+
+        🔥 Ads Managed by
+
+        <a href="https://wa.link/2ks57l">
+            Metamind Agency
+        </a>
+
+    </div>
+
+
+    ```html
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{
+    if(f.fbq)return;
+
+    n=f.fbq=function()
+    {
+        n.callMethod ?
+        n.callMethod.apply(n,arguments) :
+        n.queue.push(arguments)
+    };
+
+    if(!f._fbq)f._fbq=n;
+
+    n.push=n;
+    n.loaded=!0;
+    n.version='2.0';
+    n.queue=[];
+
+    t=b.createElement(e);
+    t.async=!0;
+    t.src=v;
+
+    s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)
+}
+(
+    window,
+    document,
+    'script',
+    'https://connect.facebook.net/en_US/fbevents.js'
+);
+
+fbq('init', '2044129323110818');
+fbq('track', 'PageView');
+</script>
+
+<noscript>
+    <img
+        height="1"
+        width="1"
+        style="display:none"
+        src="https://www.facebook.com/tr?id=2044129323110818&ev=PageView&noscript=1"
+    />
+</noscript>
+<!-- End Meta Pixel Code -->
+```
+
+
+
+    <!-- =========================
+         COUNTDOWN + AUTO REDIRECT
+    ========================== -->
+
+    <script>
+
+    let timeLeft = 10;
+
+    const countdownEl =
+        document.getElementById('countdown');
+
+    const telegramLink =
+        "https://t.me/+0sTSpgABJRFiZWM1";
+
+
+    const timer = setInterval(function() {
+
+        timeLeft--;
+
+        countdownEl.textContent = timeLeft;
+
+
+        if (timeLeft <= 0) {
+
+            clearInterval(timer);
+
+            window.location.href = telegramLink;
+
         }
-      }
-      var primary = document.getElementById('btn-join-telegram');
-      var secondary = document.getElementById('btn-join-telegram-alt');
-      if (primary) primary.addEventListener('click', fireLead);
-      if (secondary) secondary.addEventListener('click', fireLead);
-    })();
-  </script>
+
+    }, 1000);
+
+    </script>
+
+
+</div>
+
 </body>
 </html>
+```
