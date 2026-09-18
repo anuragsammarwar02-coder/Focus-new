@@ -8,6 +8,56 @@
 <meta name="description"
 content="Join Forex Focus for free daily Forex analysis and signals.">
 
+<title>Forex Focus - Join Free Telegram Channel</title>
+
+<!-- =========================
+     META PIXEL
+========================= -->
+
+<script>
+!function(f,b,e,v,n,t,s)
+{
+    if(f.fbq)return;
+
+    n=f.fbq=function(){
+        n.callMethod ?
+        n.callMethod.apply(n,arguments) :
+        n.queue.push(arguments)
+    };
+
+    if(!f._fbq)f._fbq=n;
+
+    n.push=n;
+    n.loaded=!0;
+    n.version='2.0';
+    n.queue=[];
+
+    t=b.createElement(e);
+    t.async=!0;
+    t.src=v;
+
+    s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)
+}
+(window, document, 'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '28040454538986731');
+fbq('track', 'PageView');
+</script>
+
+<noscript>
+<img
+height="1"
+width="1"
+style="display:none"
+src="https://www.facebook.com/tr?id=28040454538986731&ev=PageView&noscript=1"
+/>
+</noscript>
+
+<!-- END META PIXEL -->
+
+
 <style>
 
 /* =========================
@@ -26,7 +76,7 @@ content="Join Forex Focus for free daily Forex analysis and signals.">
 ========================= */
 
 body {
-    font-family: Arial, Segoe UI, sans-serif;
+    font-family: Arial, "Segoe UI", sans-serif;
     background: #f7f9fc;
     color: #151525;
 }
@@ -117,6 +167,10 @@ h1 {
     font-size: 18px;
 }
 
+.rating small {
+    color: #777;
+}
+
 
 /* =========================
    BUTTONS
@@ -132,6 +186,12 @@ h1 {
     font-weight: bold;
     margin: 20px 0;
     box-shadow: 0 5px 15px #b8d0ff;
+    cursor: pointer;
+    transition: transform 0.15s ease;
+}
+
+.btn:active {
+    transform: scale(0.98);
 }
 
 
@@ -151,12 +211,14 @@ h1 {
     padding: 15px 5px;
     border-radius: 14px;
     box-shadow: 0 3px 10px #eee;
+    font-size: 13px;
 }
 
 .number {
     color: #0066ff;
     font-size: 20px;
     font-weight: bold;
+    margin-bottom: 4px;
 }
 
 
@@ -179,6 +241,11 @@ h1 {
     margin: 10px;
     font-size: 13px;
 }
+
+
+/* =========================
+   ALERT
+========================= */
 
 .alert {
     background: #fff3e0;
@@ -205,6 +272,7 @@ h1 {
     gap: 12px;
     align-items: center;
     box-shadow: 0 2px 8px #eee;
+    font-size: 14px;
 }
 
 .icon {
@@ -229,6 +297,11 @@ h1 {
     font-weight: bold;
     text-decoration: none;
 }
+
+
+/* =========================
+   DISCLAIMER
+========================= */
 
 .disclaimer {
     margin-top: 20px;
@@ -308,7 +381,7 @@ h1 {
 
         <br>
 
-        <small style="color:#777;">
+        <small>
             4.9/5 (2340 Reviews)
         </small>
 
@@ -329,13 +402,12 @@ h1 {
 
 
     <!-- =========================
-         JOIN BUTTON
+         JOIN BUTTON 1
     ========================== -->
 
     <a
-        class="btn"
+        class="btn subscribe-btn"
         href="https://t.me/+0sTSpgABJRFiZWM1"
-        id="joinBtn"
     >
         Join Free Telegram Channel →
     </a>
@@ -453,11 +525,11 @@ h1 {
 
 
     <!-- =========================
-         SECOND JOIN BUTTON
+         JOIN BUTTON 2
     ========================== -->
 
     <a
-        class="btn"
+        class="btn subscribe-btn"
         href="https://t.me/+0sTSpgABJRFiZWM1"
     >
         Join Free Telegram Channel →
@@ -488,69 +560,107 @@ h1 {
 
         🔥 Ads Managed by
 
-        <a href="https://wa.link/2ks57l">
+        <a
+            href="https://wa.link/2ks57l"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
             Metamind Agency
         </a>
 
     </div>
 
-<!-- Meta Pixel Code -->
+
+</div>
+
+
+<!-- =========================
+     SUBSCRIBE TRACKING
+========================= -->
+
 <script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '28040454538986731');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=28040454538986731&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
+
+const telegramLink = "https://t.me/+0sTSpgABJRFiZWM1";
+
+let subscribeTracked = false;
 
 
+/*
+ * Track Subscribe only once
+ */
+function trackSubscribe() {
+
+    if (subscribeTracked) {
+        return;
+    }
+
+    subscribeTracked = true;
+
+    if (typeof fbq === "function") {
+
+        fbq("track", "Subscribe", {
+            content_name: "Forex Focus Telegram Channel",
+            content_category: "Telegram Subscription"
+        });
+
+    }
+}
 
 
-    <!-- =========================
-         COUNTDOWN + AUTO REDIRECT
-    ========================== -->
+/*
+ * Track both Join buttons
+ */
+document.querySelectorAll(".subscribe-btn").forEach(function(button) {
 
-    <script>
+    button.addEventListener("click", function() {
 
-    let timeLeft = 10;
+        trackSubscribe();
 
-    const countdownEl =
-        document.getElementById('countdown');
+    });
 
-    const telegramLink =
-        "https://t.me/+0sTSpgABJRFiZWM1";
-
-
-    const timer = setInterval(function() {
-
-        timeLeft--;
-
-        countdownEl.textContent = timeLeft;
+});
 
 
-        if (timeLeft <= 0) {
+/*
+ * Countdown
+ */
 
-            clearInterval(timer);
+let timeLeft = 10;
+
+const countdownEl =
+    document.getElementById("countdown");
+
+
+const timer = setInterval(function() {
+
+    timeLeft--;
+
+    countdownEl.textContent = timeLeft;
+
+
+    if (timeLeft <= 0) {
+
+        clearInterval(timer);
+
+        /*
+         * Auto redirect is also treated
+         * as a subscription attempt.
+         */
+
+        trackSubscribe();
+
+        setTimeout(function() {
 
             window.location.href = telegramLink;
 
-        }
+        }, 150);
 
-    }, 1000);
+    }
 
-    </script>
+}, 1000);
 
+</script>
 
-</div>
 
 </body>
 </html>
